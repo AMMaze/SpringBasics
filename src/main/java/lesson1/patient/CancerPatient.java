@@ -3,13 +3,7 @@ package lesson1.patient;
 import lesson1.hospital.CancerCenter;
 import lesson1.hospital.Hospital;
 import lesson1.person.Person;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
-@Component("cancer")
-@Scope("prototype")
 public class CancerPatient implements Patient {
     Person person;
     int id;
@@ -32,7 +26,6 @@ public class CancerPatient implements Patient {
         return hospital;
     }
 
-    @PostConstruct
     private void init() {
         id = hospital.addPatient();
     }

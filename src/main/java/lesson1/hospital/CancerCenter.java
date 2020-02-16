@@ -1,9 +1,6 @@
 package lesson1.hospital;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class CancerCenter implements Hospital {
     private static final String name = "Cancer Center";
     private static final String address = "Address1";
